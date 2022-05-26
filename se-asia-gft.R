@@ -11,3 +11,6 @@
 
 # Load Libraries -------------------------
 library(tidyverse)
+
+# Set Working Directories ----------------
+DirMAIN  <- "/Users/dondealban/Dropbox/Research/se-asai-gft/"
