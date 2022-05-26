@@ -45,4 +45,4 @@ pAVEM <- pAVEM + labs(title="Avoided Total Emissions from Undeveloped Forests wi
 # Save Output Plots ----------------------
 ggsave(pAREA, file="SEAsia-GFT-Area.pdf", width=20, height=15, units="cm", dpi=300)
 ggsave(pCARB, file="SEAsia-GFT-TotalCarbon.pdf", width=20, height=15, units="cm", dpi=300)
-ggsave(pAVEM, file="SEAsia-GFT-AvoidedEmissions1.pdf", width=20, height=15, units="cm", dpi=300)
+ggsave(pAVEM, file="SEAsia-GFT-AvoidedEmissions.pdf", width=20, height=15, units="cm", dpi=300)
