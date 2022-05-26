@@ -20,3 +20,10 @@ setwd(DirMAIN)
 csvAREA <- read.csv(file="SEAsia GFT_Results_Area.csv", header=TRUE, sep=",")
 csvCARB <- read.csv(file="SEAsia GFT_Results_Total Carbon.csv", header=TRUE, sep=",")
 
+dfAREA <- csvAREA
+dfCARB <- csvCARB
+
+# Generate Plots -------------------------
+
+# Land area of ndeveloped forests within concessions
+pAREA <- ggplot() + geom_line(data=dfAREA, aes(x=TreeCoverPct, y=LandAreaSqKm, colour=as.factor(ConcessionType)))
