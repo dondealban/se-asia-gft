@@ -28,3 +28,4 @@ dfCARB <- csvCARB
 # Land area of ndeveloped forests within concessions
 pAREA <- ggplot() + geom_line(data=dfAREA, aes(x=TreeCoverPct, y=LandAreaSqKm, colour=ConcessionType))
 pAREA <- pAREA + facet_wrap(~ Country, scales="free")
+pAREA <- pAREA + labs(title="Undeveloped Forest within Concessions", x="Tree Cover (≥ %)", y="Land Area (km2)")
