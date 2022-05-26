@@ -1,4 +1,4 @@
-﻿Country,CarbonMapSource,ConcessionType,TreeCover%,TotalCarbon_MgC,TotalCarbon_TgC,TotalCarbon_PgC,AvoidedTotalEmissions_MtCO2e,AvoidedTotalEmissions_MMtCO2e
+Country,CarbonMapSource,ConcessionType,TreeCoverPct,TotalCarbon_MgC,TotalCarbon_TgC,TotalCarbon_PgC,AvoidedTotalEmissions_MtCO2e,AvoidedTotalEmissions_MMtCO2e
 Cambodia,ORNL,All,≥ 20%,28599627.82,28.60,0.03,104865302.01,104.87
 Cambodia,ORNL,All,≥ 30%,26841049.24,26.84,0.03,98417180.54,98.42
 Cambodia,ORNL,All,≥ 40%,24979046.94,24.98,0.02,91589838.79,91.59
