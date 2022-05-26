@@ -26,4 +26,5 @@ dfCARB <- csvCARB
 # Generate Plots -------------------------
 
 # Land area of ndeveloped forests within concessions
-pAREA <- ggplot() + geom_line(data=dfAREA, aes(x=TreeCoverPct, y=LandAreaSqKm, colour=as.factor(ConcessionType)))
+pAREA <- ggplot() + geom_line(data=dfAREA, aes(x=TreeCoverPct, y=LandAreaSqKm, colour=ConcessionType))
+pAREA <- pAREA + facet_wrap(~ Country, scales="free")
