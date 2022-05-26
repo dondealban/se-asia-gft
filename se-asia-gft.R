@@ -28,16 +28,21 @@ dfCARB <- csvCARB
 # Land area of undeveloped forests within concessions
 pAREA <- ggplot() + geom_line(data=dfAREA, aes(x=TreeCoverPct, y=LandAreaSqKm, colour=ConcessionType))
 pAREA <- pAREA + facet_wrap(~ Country, scales="free")
-pAREA <- pAREA + labs(title="Undeveloped Forests within Concessions", x="Tree Cover (≥ %)", y="Land Area (km2)")
+pAREA <- pAREA + labs(title="Undeveloped Forests within Concessions", x="Tree Cover (%)", y="Land Area (km2)")
 
 # Total carbon stored by undeveloped forests within concessions
-pCARB <- ggplot() + geom_line(data=dfCARB, aes(x=TreeCoverPct, y=TotalCarbon_TgC, colour=ConcessionType))
-pCARB <- pCARB + facet_grid(Country ~ CarbonMapSource, scales="free_y")
+pCARB <- ggplot() + geom_line(data=dfCARB, aes(x=TreeCoverPct, y=TotalCarbon_TgC, colour=CarbonMapSource))
+pCARB <- pCARB + facet_grid(Country ~ ConcessionType, scales="free_y")
 pCARB <- pCARB + labs(title="Total Carbon Stored by Undeveloped Forests within Concessions", 
-                      x="Tree Cover (≥ %)", y="Total Carbon (Tg or MMT)")
+                      x="Tree Cover (%)", y="Total Carbon (Tg or MMT)")
 
 # Avoided total emissions by undeveloped forests within concessions
-pAVEM <- ggplot() + geom_line(data=dfCARB, aes(x=TreeCoverPct, y=AvoidedTotalEmissions_MMtCO2e, colour=ConcessionType))
-pAVEM <- pAVEM + facet_grid(Country ~ CarbonMapSource, scales="free_y")
+pAVEM <- ggplot() + geom_line(data=dfCARB, aes(x=TreeCoverPct, y=AvoidedTotalEmissions_MMtCO2e, colour=CarbonMapSource))
+pAVEM <- pAVEM + facet_grid(Country ~ ConcessionType, scales="free_y")
 pAVEM <- pAVEM + labs(title="Avoided Total Emissions from Undeveloped Forests within Concessions", 
-                      x="Tree Cover (≥ %)", y="Avoided Emissions (MMtCO2e)")
+                      x="Tree Cover (%)", y="Avoided Emissions (MMt CO2e)")
+
+# Save Output Plots ----------------------
+ggsave(pAREA, file="SEAsia-GFT-Area.pdf", width=20, height=15, units="cm", dpi=300)
+ggsave(pCARB, file="SEAsia-GFT-TotalCarbon.pdf", width=20, height=15, units="cm", dpi=300)
+ggsave(pAVEM, file="SEAsia-GFT-AvoidedEmissions1.pdf", width=20, height=15, units="cm", dpi=300)
