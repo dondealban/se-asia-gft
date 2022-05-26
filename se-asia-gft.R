@@ -13,4 +13,10 @@
 library(tidyverse)
 
 # Set Working Directories ----------------
-DirMAIN  <- "/Users/dondealban/Dropbox/Research/se-asai-gft/"
+DirMAIN  <- "/Users/dondealban/Dropbox/Research/se-asia-gft/"
+
+# Read Data Files ------------------------
+setwd(DirMAIN)
+csvAREA <- read.csv(file="SEAsia GFT_Results_Area.csv", header=TRUE, sep=",")
+csvCARB <- read.csv(file="SEAsia GFT_Results_Total Carbon.csv", header=TRUE, sep=",")
+
